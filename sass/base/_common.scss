@@ -7,6 +7,17 @@ body {
     background-color: $primaryBgc;
 }
 .section {
+    @include mq(mobile) {
+            width: 450px;
+        }
+    
+        @include mq(tablet) {
+            width: 738px;
+        }
+    
+        @include mq(desktop) {
+            width: 1200px;
+        }
     padding-top: 94px;
     padding-bottom: 94px;
 }
