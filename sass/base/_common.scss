@@ -7,19 +7,21 @@ body {
     background-color: $primaryBgc;
 }
 .section {
-    @include mq(mobile) {
-            width: 450px;
+    @include mq(not-desktop) {
+            padding-top: 60px;
+            padding-bottom: 60px;
         }
     
-        @include mq(tablet) {
-            width: 738px;
-        }
+        // @include mq(tablet) {
+        //     padding-top: 60px;
+        //     padding-bottom: 60px;
+        // }
     
         @include mq(desktop) {
-            width: 1200px;
-        }
-    padding-top: 94px;
+        padding-top: 94px;
     padding-bottom: 94px;
+        }
+    
 }
 h3 {
     margin-bottom: 10px;

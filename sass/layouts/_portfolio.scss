@@ -1,8 +1,13 @@
 .exsamples-list {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+    @include mq(mobile){
+        padding: 0 15px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+    // justify-content: center;
+    // align-items: center;
+    // margin-bottom: 50px;
 }
 
 .button.current {
@@ -39,12 +44,16 @@
 .exsamples-btn {
     margin-right: 8px;
     &:last-child{margin-right: 0;}
+    @include mq(mobile){
+        &:nth-child(-n+2){margin-bottom: 15px;}
+    }
 }
 
 
 .exsamples-model {
-    display: flex;
-    flex-wrap: wrap;
+
+    // display: flex;
+    // flex-wrap: wrap;
 }
 
 .exsamples-model-item {
