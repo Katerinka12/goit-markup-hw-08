@@ -1,9 +1,10 @@
 .hero {
-max-width: 1600px;
+// max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    // padding-top: 200px;
-    // padding-bottom: 200px;
+    height: 100%;
+    padding-top: 118px;
+    padding-bottom: 118px;
      background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,6 +18,8 @@ max-width: 1600px;
         }
 
 @include mq(tablet){
+    padding-top: 118px;
+    padding-bottom: 118px;
 background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 url('../images/hero@1x_tb.jpg');
 @include mq(retina){
@@ -24,6 +27,8 @@ background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
 url('../images/hero@2x_tb.jpg');
 }}
 @include mq(desktop){
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero@1x_dt.jpg');
     @include mq(retina){
@@ -36,13 +41,18 @@ url('../images/hero@2x_tb.jpg');
     // width: 696px;
     margin-left: auto;
     margin-right: auto;
-    @include fontstyle(900, 44px, 1.36);
-    
-    text-align: center;
+text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
     color: $whiteTextColor;
+    @include mq(not-desktop){
+        @include fontstyle(900, 26px,1.62)
+    }
+    
+    @include fontstyle(900, 44px, 1.36);
+    
+    
 }
 
 .hero .btn {
