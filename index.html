@@ -239,7 +239,40 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
             <li lass="team-item">
-              <img src="./images/team-1.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+              <!-- <img src="./images/team-1.jpg" alt="Игорь Демьяненко" width="270" height="260" /> -->
+              <picture>
+                <source
+                media="(min-width:1200px)"
+                srcset="
+                ./images/team-1@1x_dt.jpg  1x,
+                ./images/team-1@2x_dt.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:768px)"
+                srcset="
+                ./images/team-1@1x_tb.jpg  1x,
+                ./images/team-1@2x_tb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:480px)"
+                srcset="
+                ./images/team-1@1x_mb.jpg  1x,
+                ./images/team-1@2x_mb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <img
+                src="./images/team-1@1x_mb.jpg "
+                alt="Игорь Демьяненко"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
+            </picture>
               <div class="team-text">
                 <h3 class="name-title">Игорь Демьяненко</h3>
                 <p lang="en" class="post-team">Product Designer</p>
@@ -296,7 +329,39 @@
               </div>
             </li>
             <li>
-              <img src="./images/team-2.jpg" alt="Ольга Репина" width="270" height="260" />
+              <picture>
+                <source
+                media="(min-width:1200px)"
+                srcset="
+                ./images/team-2@1x_dt.jpg  1x,
+                ./images/team-2@2x_dt.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:768px)"
+                srcset="
+                ./images/team-2@1x_tb.jpg  1x,
+                ./images/team-2@2x_tb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:480px)"
+                srcset="
+                ./images/team-2@1x_mb.jpg  1x,
+                ./images/team-2@2x_mb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <img
+                src="./images/team-2@1x_mb.jpg "
+                alt="Ольга Репина"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
+            </picture>
               <div class="team-text">
                 <h3 class="name-title">Ольга Репина</h3>
                 <p lang="en" class="post-team">Frontend Developer</p>
@@ -353,7 +418,39 @@
               </div>
             </li>
             <li>
-              <img src="./images/team-3.jpg" alt="Николай Тарасов" width="270" height="260" />
+              <picture>
+                <source
+                media="(min-width:1200px)"
+                srcset="
+                ./images/team-3@1x_dt.jpg  1x,
+                ./images/team-3@2x_dt.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:768px)"
+                srcset="
+                ./images/team-3@1x_tb.jpg  1x,
+                ./images/team-3@2x_tb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:480px)"
+                srcset="
+                ./images/team-3@1x_mb.jpg  1x,
+                ./images/team-3@2x_mb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <img
+                src="./images/team-3@1x_mb.jpg "
+                alt="Николай Тарасов"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
+            </picture>
               <div class="team-text">
                 <h3 class="name-title">Николай Тарасов</h3>
                 <p lang="en" class="post-team">Marketing</p>
@@ -410,7 +507,39 @@
               </div>
             </li>
             <li>
-              <img src="./images/team-4.jpg" alt="Михаил Ермаков" width="270" height="260" />
+              <picture>
+                <source
+                media="(min-width:1200px)"
+                srcset="
+                ./images/team-4@1x_dt.jpg  1x,
+                ./images/team-4@2x_dt.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:768px)"
+                srcset="
+                ./images/team-4@1x_tb.jpg  1x,
+                ./images/team-4@2x_tb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:480px)"
+                srcset="
+                ./images/team-4@1x_mb.jpg  1x,
+                ./images/team-4@2x_mb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <img
+                src="./images/team-1@1x_mb.jpg "
+                alt="Михаил Ермаков"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
+            </picture>
               <div class="team-text">
                 <h3 class="name-title">Михаил Ермаков</h3>
                 <p lang="en" class="post-team">UI Designer</p>
@@ -520,7 +649,7 @@
       </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__contact">
         <div>
           <a href="./index.html" class="footer__logo"

@@ -2,7 +2,7 @@
     padding-bottom: 60px;
     padding-top: 60px;
     background-color: #2f303a;
-    height: 252px;
+    // height: 252px;
 }
 
 .adress {
@@ -14,17 +14,24 @@
 }
 
 .footer__logo {
-    display: inline-block;
+    // display: inline-block;
     font-family: $secondaryFontFamily;
     @include fontstyle(700, 26px, 1.19);
     text-decoration: none;
-    margin-right: 156px;
-    margin-bottom: 20px;
     color: $secondaryTextColor;
+    // margin-right: 156px;
+    margin-bottom: 20px;
+    @include mq(mobile){
+        @include fontstyle(700, 24px, 1.17); 
+        margin-bottom: 30px;
+        margin-right: 163px;
+    }
+    
 }
 
 .footer__weblogo {
     color: $whiteTextColor;
+    
 }
 
 .adress__link {
@@ -38,21 +45,22 @@
 }
 
 .adress__item {
-    margin-top: 9px;
+    text-align: center;
+    margin-top: 8px;
     &:first-child{margin-top: 0;
 
     }
 }
 
 .footer__contact {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
 }
 
 .invite__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .invite__title {

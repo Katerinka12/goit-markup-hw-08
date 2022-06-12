@@ -22,14 +22,13 @@
     border-radius: 0px 0px 4px 4px;
     
     @include mq(mobile-only){
-        width: 450px;
+        width: 100%;
     margin-bottom: 30px;
     .advantages-item &:last-child {
             margin-bottom: 0;
         }}
     }
     
-// }
 
 .team {
     background-color: $secondaryBgc;
@@ -47,11 +46,12 @@
 }
 
 .social-list {
-    @include mq(mobile){
-        display: flex;
-        justify-content: center;
-      }
+    // @include mq(mobile){
+    //     display: flex;
+    //     justify-content: center;
+    //   }
     display: flex;
+    justify-content: center;
 }
 
 .social-item {
