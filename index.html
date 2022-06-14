@@ -223,12 +223,44 @@
         </div>
       </section>
 
-      <section class="works section">
+       <section class="works section"> 
         <div class="container">
           <h2 class="works-title">Чем мы занимаемся</h2>
           <ul class="works-list">
             <li class="work-img">
-              <img
+              <picture>
+                <source
+                media="(min-width:1200px)"
+                srcset="
+                ./images/work-1@1x_dt.jpg  1x,
+                ./images/work-1@2x_dt.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:768px)"
+                srcset="
+                ./images/work-1@1x_tb.jpg  1x,
+                ./images/work-1@2x_tb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <source
+                media="(min-width:480px)"
+                srcset="
+                ./images/work-1@1x_mb.jpg  1x,
+                ./images/work-1@2x_mb.jpg  2x
+                "
+                type="image/jpg"
+                />
+                <img
+                src="./images/work-1@1x_mb.jpg "
+                alt="Руки набирают код на клавиатуре"
+                width="450"
+                height="460"
+                loading="lazy"
+              />
+            </picture> <img
                 src="./images/keyboard.jpg"
                 alt="Руки набирают код на клавиатуре."
                 width="370"
@@ -256,13 +288,12 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <section class="team section">
         <div class="container">
           <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
-            <li lass="team-item">
-              <!-- <img src="./images/team-1.jpg" alt="Игорь Демьяненко" width="270" height="260" /> -->
+            <li class="team-item">
               <picture>
                 <source
                 media="(min-width:1200px)"
@@ -291,8 +322,6 @@
                 <img
                 src="./images/team-1@1x_mb.jpg "
                 alt="Игорь Демьяненко"
-                width="450"
-                height="460"
                 loading="lazy"
               />
             </picture>
@@ -351,7 +380,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="team-item">
               <picture>
                 <source
                 media="(min-width:1200px)"
@@ -380,8 +409,6 @@
                 <img
                 src="./images/team-2@1x_mb.jpg "
                 alt="Ольга Репина"
-                width="450"
-                height="460"
                 loading="lazy"
               />
             </picture>
@@ -440,7 +467,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="team-item">
               <picture>
                 <source
                 media="(min-width:1200px)"
@@ -469,8 +496,6 @@
                 <img
                 src="./images/team-3@1x_mb.jpg "
                 alt="Николай Тарасов"
-                width="450"
-                height="460"
                 loading="lazy"
               />
             </picture>
@@ -529,7 +554,7 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <li class="team-item">
               <picture>
                 <source
                 media="(min-width:1200px)"
@@ -558,8 +583,6 @@
                 <img
                 src="./images/team-1@1x_mb.jpg "
                 alt="Михаил Ермаков"
-                width="450"
-                height="460"
                 loading="lazy"
               />
             </picture>
@@ -676,8 +699,7 @@
       <div class="container footer__contact">
         <div class="footer__contact-adress">
           <a href="./index.html" class="footer__logo"
-            >Web<span class="footer__weblogo">Studio</span></a
-          >
+            >Web<span class="footer__weblogo">Studio</span></a>
           <address class="adress">
             <ul class="adress__list">
               <li class="adress__item">

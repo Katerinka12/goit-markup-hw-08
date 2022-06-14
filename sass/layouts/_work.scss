@@ -1,5 +1,5 @@
 .works.section {
-    @include mq(mobile-only){
+    @include mq(not-desktop){
         display: none;
     }
     padding-top: 0;

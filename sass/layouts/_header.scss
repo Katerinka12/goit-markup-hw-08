@@ -1,16 +1,15 @@
 .header {
-    // height: 80px; 
-    position: relative;
     background-color: $primaryBgc;
     border-bottom: 1px solid #ececec;
+     @include mq(mobile){position: relative;}
 }
 
 .header__container {
-   
-    // display: flex;
-    // // height: 80px;
-    // justify-content: space-between;
-    // align-items: center;
+    @include mq(tablet-only)
+    {display: flex;
+    justify-content: space-between;
+    align-items: center;}
+    
 }
 
 .header__nav {
@@ -67,6 +66,7 @@
 .network__list{
     display: flex;
     margin-top: 64px;
+    
 }
 .network__item{
     @include mq(mobile){
@@ -121,14 +121,17 @@
 }
 
 .header__contact-item {
-    // display: flex;
-    // justify-content: center;
-    // margin-right: 50px;
-    // align-items: center;
+    
     &:last-child {
             margin-right: 0;
+        }}
+.header__nav{ @include mq(tablet-only){
+             display: flex;
+    justify-content: center;
+    margin-right: 50px;
+    align-items: center;}
+       
         }
-}
 
 // .header__link--current {
 //     color: $secondaryTextColor;
@@ -175,6 +178,9 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    @include mq(tablet-only){
+        display: none;
+    }
 }
 .menu__button .icon-close_menu{
     display: block;
@@ -202,6 +208,7 @@
         display: block;
         z-index: 4;
     }
+    
 }
 
 
@@ -212,6 +219,9 @@
     cursor: pointer;
     padding: 0;
     z-index: 100;
+    @include mq(tablet-only){
+        display: none;
+    }
   }
 
   .icon-close_menu {
@@ -228,5 +238,8 @@
     .menu__button:hover &,
     .menu__button:focus & {
       fill: $secondaryTextColor;
+    }
+    @include mq(tablet-only){
+        display: none;
     }
   }
