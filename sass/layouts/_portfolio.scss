@@ -5,6 +5,7 @@
         flex-wrap: wrap;
         margin-bottom: 40px;
     }
+    
     // justify-content: center;
     // align-items: center;
     // margin-bottom: 50px;
@@ -39,6 +40,9 @@
     background-color: $secondaryTextColor;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);}
+        @include mq(tablet){
+            margin-bottom: 30px;
+        }
 }
 
 .exsamples-btn {
@@ -55,11 +59,11 @@
 
 
 
-.exsamples-model {
+.exsamples-model { @include mq(tablet){ display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100% - 60px)) /2 ;
+    margin: 0 -15px -15px 0;}}
 
-    // display: flex;
-    // flex-wrap: wrap;
-}
 
 .exsamples-model-item {
     margin-right: 30px;
@@ -75,14 +79,21 @@
     margin-right: 0;
     &:last-child{margin-bottom: 0;}
 }
+@include mq(tablet){
+    margin: 0 30px 30px 0;
+            flex-basis: 354px;
+&:nth-child(2n){margin-right: 0;}}
+    
 }
+
 
 
 
 .exsamples-model-text {
     border: 1px solid #eeeeee;
+  
 }
-
+// 
 .exsamples-model-link {
     display: block;
     width: 100%;
@@ -92,6 +103,10 @@
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
                 1px 4px 6px rgba(0, 0, 0, 0.16);
         }
+ @include mq(tablet){ 
+          width: 354px ;
+          max-height: 440px;
+            }
 }
 
 .exsamples-model-title {
@@ -112,6 +127,8 @@
     @include fontstyle(400, 16px, 1.88);
 
     color: $primaryTextColor;
+    @include mq(tablet){&:first-child{padding-bottom: 20px;}}
+    
 }
 
 .product-thumb {
