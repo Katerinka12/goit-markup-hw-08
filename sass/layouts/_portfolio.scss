@@ -5,10 +5,11 @@
         flex-wrap: wrap;
         margin-bottom: 40px;
     }
+    @include mq(desktop){ justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;}
     
-    // justify-content: center;
-    // align-items: center;
-    // margin-bottom: 50px;
+   
 }
 
 .button.current {
@@ -61,39 +62,52 @@
 
 .exsamples-model { @include mq(tablet){ display: flex;
     flex-wrap: wrap;
-    flex-basis: calc((100% - 60px)) /2 ;
-    margin: 0 -15px -15px 0;}}
+    flex-basis: calc((100% - 30px)) /2 ;
+    margin: -15px -15px -15px -15px;}
+    @include mq(desktop){ display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - 60px)) /3 ;
+        margin: -15px -15px -15px -15px;}}
 
 
 .exsamples-model-item {
     margin-right: 30px;
     margin-bottom: 30px;
     border-bottom: 1px solid #eeeeee;
-//     &:nth-child(3n) {
-//             margin-right: 0;
-//         }
-//     &:nth-child(n + 7) {
-//     margin-bottom: 0px;
-// }
+    @media screen and (max-width:479px)
+    {
+        
+        margin-bottom: 30px;
+    }
 @include mq(mobile-only){
     margin-right: 0;
     &:last-child{margin-bottom: 0;}
 }
-@include mq(tablet){
-    margin: 0 30px 30px 0;
+
+
+@include mq(desktop){ 
+    &:nth-child(2n){margin-right: 30px;}}   
+    &:nth-child(3n) {
+            margin-right: 0;}
+        
+
+@include mq(tablet-only){
+    margin: 15px 15px 15px 15px;
             flex-basis: 354px;
-&:nth-child(2n){margin-right: 0;}}
+    &:last-child{margin-bottom: 0;
+    margin-right: 0;}
+}}
+
+.exsamles-model-type.pad{
+    @include mq(tablet-only){padding-bottom:36px;}
     
 }
-
-
-
 
 .exsamples-model-text {
     border: 1px solid #eeeeee;
   
 }
-// 
+
 .exsamples-model-link {
     display: block;
     width: 100%;
@@ -107,6 +121,10 @@
           width: 354px ;
           max-height: 440px;
             }
+            @include mq(desktop){ 
+                width: 370px ;
+                max-height: 404px;
+                  }
 }
 
 .exsamples-model-title {
@@ -162,4 +180,4 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-}
+        }
