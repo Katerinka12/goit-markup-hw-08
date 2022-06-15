@@ -30,6 +30,9 @@
     @include mq(not-desktop){
       width: 450px;
     }
+    @include mq(desktop){
+      width: 538px;
+    }
 }
 
 .backdrop.is-hidden .modal-wrapper {
@@ -49,7 +52,7 @@
   margin-top: 40px;
   margin-bottom: 12px;
   color: $titleColor;
-  @include mq(mobile){
+  @include mq(not-desktop){
     @include fontstyle(700, 20px, 1.5);
     margin: 40px 40px 12px;
   }
@@ -127,11 +130,13 @@
 
 .text.policy-desc {
   display: block;
-  @include fontstyle(400, 14px, 1.71);
+  
   letter-spacing: 0.03em;
   text-align: center;
   @include mq(mobile)
   {@include fontstyle(400, 12px, 1.71);}
+  @include mq(desktop)
+  {@include fontstyle(400, 14px, 1.71);}
 }
 
 .form-icon {
