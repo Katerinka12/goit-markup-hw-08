@@ -5,8 +5,9 @@
         flex-wrap: wrap;
         margin-bottom: 40px;
     }
-    @include mq(desktop){ justify-content: center;
-    align-items: center;
+    @include mq(tablet){ justify-content: center;
+        align-items: center;}
+    @include mq(desktop){
     margin-bottom: 50px;}
     
    
@@ -44,6 +45,9 @@
         @include mq(tablet){
             margin-bottom: 30px;
         }
+        @include mq(desktop){
+            margin-bottom: 0;
+        }
 }
 
 .exsamples-btn {
@@ -63,17 +67,17 @@
 .exsamples-model { @include mq(tablet){ display: flex;
     flex-wrap: wrap;
     flex-basis: calc((100% - 30px)) /2 ;
-    margin: -15px -15px -15px -15px;}
+    margin: 0 -15px;}
     @include mq(desktop){ display: flex;
         flex-wrap: wrap;
         flex-basis: calc((100% - 60px)) /3 ;
-        margin: -15px -15px -15px -15px;}}
+        margin: 0 -15px 0 -15px;}
+    }
 
 
 .exsamples-model-item {
     margin-right: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #eeeeee;
     @media screen and (max-width:479px)
     {
         
@@ -84,19 +88,17 @@
     &:last-child{margin-bottom: 0;}
 }
 
-
-@include mq(desktop){ 
-    &:nth-child(2n){margin-right: 30px;}}   
-    &:nth-child(3n) {
-            margin-right: 0;}
-        
-
-@include mq(tablet-only){
-    margin: 15px 15px 15px 15px;
+@include mq(not-desktop){
+    margin: 0 30px 30px 0;
             flex-basis: 354px;
     &:last-child{margin-bottom: 0;
     margin-right: 0;}
+    
 }}
+
+        
+
+
 
 .exsamles-model-type.pad{
     @include mq(tablet-only){padding-bottom:36px;}
@@ -125,6 +127,7 @@
                 width: 370px ;
                 max-height: 404px;
                   }
+               
 }
 
 .exsamples-model-title {
