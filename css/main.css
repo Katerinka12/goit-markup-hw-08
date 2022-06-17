@@ -639,9 +639,6 @@ h3 {
     display: -ms-flexbox;
     display: flex;
     max-width: 480px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin-top: 64px;
   }
 }
@@ -653,7 +650,7 @@ h3 {
 }
 
 .network__item {
-  padding-right: 5px;
+  padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
@@ -663,7 +660,7 @@ h3 {
 }
 
 .network__item:not(:first-child) {
-  padding-left: 5px;
+  padding-left: 10px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1002,6 +999,7 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero@1x_mb.jpg");
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@1x_mb.jpg");
 }
