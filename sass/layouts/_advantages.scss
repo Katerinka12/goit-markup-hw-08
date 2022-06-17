@@ -45,6 +45,12 @@
 
 }
 
+.advantages-text
+{@include mq(mobile-only){
+    &:last-child {
+            margin-bottom: 0;
+        }}}
+
 .advantages .title-advantage {
     @include fontstyle(700, 14px, 1.14);
     
@@ -64,12 +70,12 @@
        display: flex;
      justify-content: center;
    align-items: center;
+   height: 120px;
 
     @include mq(mobile-only){
         width: 100%;
-        height: 120px; 
      }
-      @include mq(tablet){
-    height: 120px;
-    }}
-    
+      @include mq(tablet-only){
+        width: 354px;
+    }
+ }
